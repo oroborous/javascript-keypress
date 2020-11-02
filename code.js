@@ -9,10 +9,12 @@ $(document).ready(
             $("#output").text(`First text box was changed: ${randomProof}`);
         }
 
+        // Include event parameter to get information about the event
+        // that triggered this function to run
         function textBoxHadKeypress(event) {
             // Get the key that pressed from the event
-            var character = String.fromCharCode(event.keyCode);
-            $("#output").text(`Second text box heard a keypress!: ${character}` );
+            var character = event.key;
+            $("#output").text(`Second text box heard a keypress: ${character}`);
         }
     }
 );
